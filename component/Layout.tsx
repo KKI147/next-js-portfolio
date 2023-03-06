@@ -1,44 +1,58 @@
 import styled from "styled-components";
 import { PropsWithChildren } from "react";
 import NavBar from "./NavBar";
+import Content from "./Content";
+import Footer from "./Footer";
+import Wrapper from "./Wrapper";
+import { useRouter } from "next/router";
 
 interface LayoutProps {}
+
 export default function Layout({ children }: PropsWithChildren<LayoutProps>) {
+  const router = useRouter();
   return (
     <LayoutComponent>
-      <Content />
       <NavBar />
-      {children}
+      {router.pathname === "/" ? (
+        <>
+          {children}
+          <Footer />
+        </>
+      ) : (
+        <Wrapper>
+          <TopSection>{children}</TopSection>
+          <Footer />
+        </Wrapper>
+      )}
     </LayoutComponent>
   );
 }
 
 const LayoutComponent = styled.div`
+  display: flex;
   position: relative;
   height: 100vh;
-  background: url("/images/polygon.png");
-  background-repeat: no-repeat;
+  padding: 20px 20px;
+  background: url("/images/background.svg");
 `;
 
-const Content = styled.div`
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+const TopSection = styled.div`
+  position: relative;
   width: 100%;
-  height: 0;
-  border-top: 1px solid #cdcdcd;
-  ::before {
-    position: absolute;
-    width: calc(30% - 30px);
-    top: -100px;
-    left: 10%;
-    background-color: #212121;
-    word-break: keep-all;
-    font-size: 3.5rem;
-    content: "Skils and Knowledge Always Circulating, To anyone.";
-    font-weight: 500;
-    color: #fff;
-    padding: 0 15px;
+  height: 95%;
+  background-color: #444444;
+  border-radius: 16px;
+  padding: 50px 50px;
+  overflow-y: scroll;
+  ::-webkit-scrollbar {
+    display: none;
   }
+`;
+
+const HomePage = styled.div`
+  position: relative;
+  width: 100%;
+  height: 95%;
+  background-color: transparent;
+  border-radius: 16px;
 `;

@@ -1,60 +1,104 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
 export default function NavBar() {
-  const ref = useRouter();
-  console.log(ref);
+  const router = useRouter();
+
   return (
     <Section>
       <LinkBox>
-        <Link href={"/education"}>
-          <Text>Home</Text>
+        <Link href={"/"}>
+          {router.pathname === "/" ? <Locate>Home</Locate> : <Text>Home</Text>}
         </Link>
         <Link href={"/education"}>
-          <Text>Education</Text>
+          {router.pathname === "/education" ? (
+            <Locate>Education</Locate>
+          ) : (
+            <Text>Education</Text>
+          )}
         </Link>
         <Link href={"/skils"}>
-          <Text>Skils</Text>
+          {router.pathname === "/skils" ? (
+            <Locate>Skils</Locate>
+          ) : (
+            <Text>Skils</Text>
+          )}
         </Link>
         <Link href={"/projects"}>
-          <Text>Projects</Text>
+          {router.pathname === "/projects" ? (
+            <Locate>Projects</Locate>
+          ) : (
+            <Text>Projects</Text>
+          )}
         </Link>
         <Link href={"exp"}>
-          <Text>Exp, Storage.</Text>
+          {router.pathname === "/exp" ? (
+            <Locate>Exp, Storage.</Locate>
+          ) : (
+            <Text>Exp, Storage.</Text>
+          )}
         </Link>
       </LinkBox>
-      <CopyLight>
-        <div>© Copyright 2023. Made by Kim kyeong il</div>
-      </CopyLight>
     </Section>
   );
 }
 
 const Section = styled.section`
   display: flex;
-  width: 100%;
-  justify-content: space-between;
-  position: absolute;
-  padding: 0 20px 20px;
-  bottom: 0%;
+  position: relative;
+  width: 15%;
+  height: calc(100vh - 40px);
   font-size: 1.5rem;
   color: #fff;
 `;
 
 const LinkBox = styled.div`
-  padding: 0 0 20px 20px;
+  position: absolute;
+  width: 100%;
+  padding: 0 15px;
+  bottom: 30px;
 `;
-
+const hover = keyframes`
+0% {
+  width: 0px;
+    
+}
+100% {
+  width: 40px;
+  
+}
+`;
 const Text = styled.div`
+  position: relative;
   color: #888888;
   margin: 0 0 15px 0;
+  :hover {
+    color: #fff;
+    ::after {
+      position: absolute;
+      display: inline-block;
+      width: 40px;
+      top: 12px;
+      margin: 0 0 0 20px;
+      content: "";
+      border-top: 1px solid #fff;
+      animation: ${hover} 0.5s;
+    }
+  }
 `;
 
-const CopyLight = styled.div`
-  position: absolute;
-  bottom: 5%;
-  left: 85%;
-  padding: 0 20px 20px 0;
-  font-size: 1rem;
+const Locate = styled.div`
+  position: relative;
+  color: #fff;
+  margin: 0 0 15px 0;
+  ::after {
+    position: absolute;
+    display: inline-block;
+    width: 40px;
+    top: 12px;
+    margin: 0 0 0 20px;
+    content: "";
+    border-top: 1px solid #fff;
+  }
 `;

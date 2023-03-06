@@ -1,5 +1,6 @@
 import styled from "styled-components";
+import Wrapper from "@/component/Wrapper";
 
 export default function Exp() {
-  return <>exp</>;
+  return <Wrapper>exp</Wrapper>;
 }
