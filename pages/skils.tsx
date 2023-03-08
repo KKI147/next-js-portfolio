@@ -459,35 +459,14 @@ const ContentText = styled.div`
   margin: 5px 0;
   line-height: 1.5;
 `;
-const HtmlEffect = keyframes`
-0% {
-  width: 0px;
-      background-color: #888888;
-}
-100% {
-  width: 65%;
-      background-color: #ffa877;
-}
-`;
 
-const ReactEffect = keyframes`
+const Effect = (fullWidth: string) => keyframes`
 0% {
   width: 0px;
       background-color: #888888;
 }
 100% {
-  width: 60%;
-      background-color: #ffa877;
-}
-`;
-
-const TsEffect = keyframes`
-0% {
-  width: 0px;
-      background-color: #888888;
-}
-100% {
-  width: 55%;
+  width: ${fullWidth};;
       background-color: #ffa877;
 }
 `;
@@ -503,17 +482,17 @@ const Animation = styled.div`
       case "html":
         return css`
           width: 65%;
-          animation: ${HtmlEffect} 2s;
+          animation: ${Effect("65%")} 2s;
         `;
       case "react":
         return css`
           width: 60%;
-          animation: ${ReactEffect} 2s;
+          animation: ${Effect("60")} 2s;
         `;
       case "ts":
         return css`
           width: 55%;
-          animation: ${TsEffect} 2s;
+          animation: ${Effect("55%")} 2s;
         `;
       default:
         break;
