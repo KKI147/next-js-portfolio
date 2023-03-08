@@ -1,6 +1,5 @@
 import Head from "next/head";
 import styled, { css } from "styled-components";
-import Wrapper from "@/component/Wrapper";
 
 interface CssType {
   variant: string;
@@ -15,14 +14,32 @@ export default function Projects() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Wrapper>
-        <TotlaWrapper>
-          <LeftWrapper>
-            <Box color="150px 0 0 0 ">
-              <Date variant="left">2023.02</Date>
-              <div>
-                <Title>F:E Func, Development</Title>
-                <Text>
+      <>
+        <Line>
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="right">
+              <ProjectHeader>2023.03</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>Portfolio</ContentTitle>
+                <Content>
+                  <div>
+                    ‣ 본인의 기술스택 정리와 구현해보고자 했던 기술을 적용한
+                    포트폴리오 사이트.
+                  </div>
+                  <div>‣ Next-Js와 TypeScript를 학습 후 재작.</div>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
+
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="left">
+              <ProjectHeader>2023.02</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>F:E Func, Development</ContentTitle>
+                <Content>
                   <div>
                     ‣ FE에서 사용자에게 자주 사용되고 유용한 서비스를 리스트업
                     하고 학습 및 개발.
@@ -45,15 +62,39 @@ export default function Projects() {
                   <div>‣ React-Calender 개발예정.</div>
                   <div>‣ Kakao Map API Service를 통한 Map 개발예정.</div>
                   <div>‣ Recoil Store를 통한 Loading Component 개발예정.</div>
-                </Text>
-              </div>
-            </Box>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
 
-            <Box color="180px 0 0 0 ">
-              <Date variant="left">2023.01</Date>
-              <div>
-                <Title>Portfolio</Title>
-                <Text>
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="right">
+              <ProjectHeader>2023.01</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>카카오(Kakao) 클론코딩</ContentTitle>
+                <Content>
+                  <div>
+                    ‣ 카카오 페이지의 Card Component 반응형 CSS 학습을 위한
+                    클론코딩.
+                  </div>
+                  <div>
+                    ‣ 작년에 새로 배포된 Next.js v13 사용 및 SSR 서비스 학습.
+                  </div>
+                  <div>‣ 각 화면 width에 따른 반응형 CSS 개발.</div>
+                  <div>‣ Component Props Type, Interface 학습 및 적용.</div>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
+
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="left">
+              <ProjectHeader>2023.01</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>Portfolio</ContentTitle>
+                <Content>
                   <div>
                     ‣ 본인의 기술스택 정리와 구현해보고자 했던 기술을 적용한
                     포트폴리오 사이트.
@@ -64,15 +105,44 @@ export default function Projects() {
                     ‣ React-Slider를 활용하여, 포트폴리오 목록을 carousel로
                     개발.
                   </div>
-                </Text>
-              </div>
-            </Box>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
 
-            <Box color="180px 0 0 0 ">
-              <Date variant="left">2022.11</Date>
-              <div>
-                <Title>Velog 클론코딩</Title>
-                <Text>
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="right">
+              <ProjectHeader>2022.12</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>Vongole</ContentTitle>
+                <Content>
+                  <div>
+                    ‣ 비동기 API 통신 및 Redux를 사용한 게시판 댓글 CRUD 서비스
+                    개발.
+                  </div>
+                  <div>‣ React-Calendar를 사용한 달력 개발.</div>
+                  <div>
+                    ‣ 월별 봉사일정 및 회원 각 개인일정 표기 Calendar Event
+                    개발.
+                  </div>
+                  <div>‣ Kakao Map API를 사용한 Component 개발.</div>
+                  <div>‣ 선택 및 특정지역 Marker 표기 개발.</div>
+                  <div>
+                    ‣ Figma Design File을 통한 디자이너와 협업 퍼블리싱 진행.
+                  </div>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
+
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="left">
+              <ProjectHeader>2022.11</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>Velog 클론코딩</ContentTitle>
+                <Content>
                   <div>
                     ‣ Velog 클론코딩과 서비스 및 기능 이해를 위한 프로젝트.
                   </div>
@@ -88,85 +158,18 @@ export default function Projects() {
                   </div>
                   <div>‣ 프로젝트 퍼블리싱 및 Nav Bar Component 개발.</div>
                   <div>‣ 프로젝트 일정관리 및 협업 Notion 이용.</div>
-                </Text>
-              </div>
-            </Box>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
 
-            <Box color="180px 0 0 0 ">
-              <Date variant="left">2022.10</Date>
-              <div>
-                <Title>To Do List</Title>
-                <Text>
-                  <div>
-                    ‣ 스스로 해야하는 목록에 대해서 첫 CRUD 개발 사이트.
-                  </div>
-                  <div>‣ 게시글 목록에 대한 작성 및 사용자 Alert 개발.</div>
-                  <div>‣ 게시글 삭제 및 API 데모 통신 개발.</div>
-                  <div>‣ 프로젝트 퍼블리싱.</div>
-                </Text>
-              </div>
-            </Box>
-          </LeftWrapper>
-
-          <MiddeWrapper>
-            <Line></Line>
-          </MiddeWrapper>
-
-          <RightWrapper>
-            <Box>
-              <Date variant="right">2023.03</Date>
-              <div>
-                <Title>Portfolio</Title>
-                <Text>
-                  <div>‣ Next-Js와 TypeScript로 작성한 Portfolio.</div>
-                </Text>
-              </div>
-            </Box>
-            <Box>
-              <Date variant="right">2023.01</Date>
-              <div>
-                <Title>카카오(Kakao) 클론코딩</Title>
-                <Text>
-                  <div>
-                    ‣ 카카오 페이지의 Card Component 반응형 CSS 학습을 위한
-                    클론코딩.
-                  </div>
-                  <div>
-                    ‣ 작년에 새로 배포된 Next.js v13 사용 및 SSR 서비스 학습.
-                  </div>
-                  <div>‣ 각 화면 width에 따른 반응형 CSS 개발.</div>
-                  <div>‣ Component Props Type, Interface 학습 및 적용.</div>
-                </Text>
-              </div>
-            </Box>
-
-            <Box>
-              <Date variant="right">2022.12</Date>
-              <div>
-                <Title>Vongole</Title>
-                <Text>
-                  <div>
-                    ‣ 비동기 API 통신 및 Redux를 사용한 게시판 댓글 CRUD 서비스
-                    개발.
-                  </div>
-                  <div>‣ React-Calendar를 사용한 달력 개발.</div>
-                  <div>
-                    ‣ 월별 봉사일정 및 회원 각 개인일정 표기 Calendar Event
-                    개발.
-                  </div>
-                  <div>‣ Kakao Map API를 사용한 Component 개발.</div>
-                  <div>‣ 선택 및 특정지역 Marker 표기 개발.</div>
-                  <div>
-                    ‣ Figma Design File을 통한 디자이너와 협업 퍼블리싱 진행.
-                  </div>
-                </Text>
-              </div>
-            </Box>
-            <Box>
-              <Date variant="right">2022.11</Date>
-              <div>
-                <Title>Race-of-the-belly</Title>
-                <Text>
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="right">
+              <ProjectHeader>2022.11</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>Race-of-the-belly</ContentTitle>
+                <Content>
                   <div>
                     ‣ 배달의민족 기능 및 서비스를 오마주하여 개발한 음식점 등록,
                     주문 서비스.
@@ -184,92 +187,182 @@ export default function Projects() {
                   <div>
                     ‣ 기본 비동기 API 통신을 통한 게시글 CRD 서비스 개발.
                   </div>
-                </Text>
-              </div>
-            </Box>
-          </RightWrapper>
-        </TotlaWrapper>
-      </Wrapper>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
+
+          {/* project */}
+          <ProjectList>
+            <ProjectContainer variant="left">
+              <ProjectHeader>2022.10</ProjectHeader>
+              <ContentContainer>
+                <ContentTitle>To Do List</ContentTitle>
+                <Content>
+                  <div>
+                    ‣ 스스로 해야하는 목록에 대해서 첫 CRUD 개발 사이트.
+                  </div>
+                  <div>‣ 게시글 목록에 대한 작성 및 사용자 Alert 개발.</div>
+                  <div>‣ 게시글 삭제 및 API 데모 통신 개발.</div>
+                  <div>‣ 프로젝트 퍼블리싱.</div>
+                </Content>
+              </ContentContainer>
+            </ProjectContainer>
+          </ProjectList>
+        </Line>
+      </>
     </>
   );
 }
 
-const TotlaWrapper = styled.div`
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-`;
-const LeftWrapper = styled.div`
-  position: relative;
-  width: 45%;
-  /* background-color: green; */
-`;
-
-const MiddeWrapper = styled.div`
-  position: relative;
-  display: flex;
-  justify-content: center;
-  width: 10%;
-  height: 100%;
-`;
-
-const Line = styled.div`
+const Line = styled.ul`
+  display: inline-block;
   position: absolute;
   width: 2px;
-  height: 100vh;
-  background-color: #fff;
+  top: 64px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: #6a6a6a;
+
+  :after {
+    content: "";
+    display: block;
+    height: 50px;
+    background-color: #444444;
+  }
 `;
 
-const RightWrapper = styled.div`
+const ProjectList = styled.li`
   position: relative;
-  width: 45%;
-  /* background-color: blueviolet; */
-`;
+  min-height: 60px;
+  margin: 0 0 12px 0;
+  :before {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+    border-radius: 25px;
+    z-index: 2;
+  }
 
-const Box = styled.div`
-  position: relative;
-  width: 100%;
+  :after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: "";
+    width: 26px;
+    height: 26px;
+    background-color: #848484;
+    border-radius: 25px;
+    z-index: 1;
+  }
+  transition: all 0.5s;
+  &:hover {
+    transform: translateY(-5%);
+  }
+`;
+const ProjectContainer = styled.div`
   background-color: #353535;
-  border-radius: 8px;
-  box-shadow: 2px 2px 6px 2px #555555;
-  margin: ${(props) => props.color || "30px 0 150px 0"};
-  padding: 20px 10px;
-`;
+  position: relative;
+  width: calc(42.5vw - 100px);
 
-const Title = styled.div`
-  padding: 0 5px;
-  font-size: 1.5rem;
   color: #fff;
-`;
-const Text = styled.div`
-  margin: 10px 0 0 0;
-  font-size: 1.2rem;
-  color: #8e8e8e;
-  line-height: 1.5;
-`;
+  padding: 20px 24px;
+  border-radius: 16px;
 
-const Date = styled.div`
+  box-shadow: 1px 1px 8px 2px rgba(255, 255, 255, 0.05);
   ${({ variant }: CssType) => {
     switch (variant) {
-      case "left":
-        return css`
-          position: absolute;
-          top: -50px;
-          right: 0;
-          color: #fff;
-          font-size: 1.5rem;
-        `;
       case "right":
         return css`
-          position: absolute;
-          top: -50px;
-          left: 0;
-          color: #fff;
-          font-size: 1.5rem;
+          left: 40px;
+          margin: 0 0 36px 0;
+          @media (max-width: 640px) {
+            left: 37px;
+          }
+          @media (max-width: 480px) {
+            left: 34px;
+          }
+        `;
+      case "left":
+        return css`
+          right: 40vw;
+          margin: 36px 0 0 10px;
+          @media (max-width: 1024px) {
+            right: 45vw;
+          }
+          @media (max-width: 640px) {
+            right: 43vw;
+          }
+          @media (max-width: 480px) {
+            right: 42vw;
+          }
         `;
       default:
         break;
     }
   }}
+  @media (max-width: 1024px) {
+    width: calc(50vw - 100px);
+  }
+  @media (max-width: 640px) {
+    width: calc(52vw - 100px);
+    padding: 18px 20px;
+  }
+  @media (max-width: 480px) {
+    width: calc(55vw - 100px);
+    padding: 14px 20px;
+  }
+`;
+const ProjectHeader = styled.div`
+  font-size: 1.2rem;
+  margin: 0 0 12px 0;
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+`;
+const ContentContainer = styled.div``;
+const ContentTitle = styled.div`
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin: 0 0 8px 0;
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+`;
+const Content = styled.div`
+  font-size: 1rem;
+  color: #8e8e8e;
+  line-height: 28px;
+  word-break: keep-all;
+  @media (max-width: 1024px) {
+    font-size: 0.9rem;
+    line-height: 26px;
+  }
+  @media (max-width: 640px) {
+    font-size: 0.8rem;
+    line-height: 24px;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
 `;

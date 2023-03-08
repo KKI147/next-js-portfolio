@@ -1,10 +1,10 @@
 import Head from "next/head";
 import styled, { css } from "styled-components";
-import Wrapper from "@/component/Wrapper";
+
 import Image from "next/image";
 
 interface CssProps {
-  width: string;
+  width?: string;
 }
 
 export default function Education() {
@@ -16,17 +16,20 @@ export default function Education() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Wrapper>
+      <>
         <ContentLayout>
           <ProfileBox>
-            <Image
-              src={"/images/info.png"}
-              width={180}
-              height={180}
-              alt="image"
-              loading="lazy"
-              style={{}}
-            />
+            <ImageBox>
+              <Image
+                src={"/images/info.png"}
+                priority={true}
+                fill
+                alt="image"
+                style={{
+                  objectFit: "contain",
+                }}
+              />
+            </ImageBox>
             <InfoBox>
               <Info>
                 <Title>Name,</Title>
@@ -34,12 +37,13 @@ export default function Education() {
               </Info>
               <Info>
                 <Title>Part,</Title>
-                <Content>FE{"{Front-End Developer}"}</Content>
+                <Content>FE &#91;Front-End Developer&#93;</Content>
               </Info>
               <Info>
                 <Title>Edu,</Title>
                 <Content>
-                  2010.03 ~ 2016.03, Konkuk University(Glocal) Graduation
+                  2010.03 ~ 2016.03, Konkuk University &#40;Glocal&#41;
+                  Graduation
                 </Content>
               </Info>
               <Info>
@@ -57,30 +61,30 @@ export default function Education() {
               </FlexBox>
               <FlexBox>
                 <Date>2023.01 ~ 2023.01,</Date>
-                <Content>[개인]포트폴리오 제작</Content>
+                <Content>&#91;개인&#93;포트폴리오 제작</Content>
               </FlexBox>
               <FlexBox>
                 <Date>2023.01 ~ 2023.01,</Date>
-                <Content>[개인]카카오(Kakao) 제작</Content>
+                <Content>&#91;개인&#93;카카오 &#40;Kakao&#41; 제작</Content>
               </FlexBox>
               <FlexBox>
                 <Date>2023.02 ~ 2023.02,</Date>
-                <Content>[개인]F:E Func, Development 개발 중</Content>
+                <Content>&#91;개인&#93;F:E Func, Development 개발 중</Content>
               </FlexBox>
               <FlexBox>
                 <Date>2023.02 ~ 2023.02,</Date>
-                <Content>[개인]Next-js 포트폴리오 개발 중</Content>
+                <Content>&#91;개인&#93;Next-js 포트폴리오 개발 중</Content>
               </FlexBox>
             </GapBox>
 
             <EducationTitle>Contact.</EducationTitle>
             <div>
               <FlexBox>
-                <Date color="100px">email,</Date>
+                <Date width={"100px"}>email,</Date>
                 <Content>rla123dlf@gmail.com</Content>
               </FlexBox>
               <FlexBox>
-                <Date color="100px">github,</Date>
+                <Date width={"100px"}>github,</Date>
                 <Click onClick={() => window.open("https://github.com/KKI147")}>
                   https://github.com/KKI147
                 </Click>
@@ -88,7 +92,7 @@ export default function Education() {
             </div>
           </EducationBox>
         </ContentLayout>
-      </Wrapper>
+      </>
     </>
   );
 }
@@ -96,29 +100,97 @@ export default function Education() {
 const ContentLayout = styled.div`
   font-size: 1.5rem;
   color: #fff;
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const ProfileBox = styled.div`
   display: flex;
-  height: fit-content;
   align-items: center;
 `;
+
+const ImageBox = styled.div`
+  position: relative;
+  width: 200px;
+  height: 180px;
+  @media (max-width: 1024px) {
+    width: 200px;
+    height: 180px;
+  }
+  @media (max-width: 640px) {
+    width: 180px;
+    height: 180px;
+  }
+  @media (max-width: 480px) {
+    width: 120px;
+    height: 120px;
+  }
+`;
+
 const InfoBox = styled.div`
+  width: 100%;
+  padding: 15px 0 0 0;
   margin: 0 0 0 16px;
+  @media (max-width: 1024px) {
+    padding: 10px 0 0 0;
+  }
+  @media (max-width: 640px) {
+    padding: 6px 0 0 0;
+    margin: 0 0 0 10px;
+  }
+  @media (max-width: 480px) {
+    padding: 2px 0 0 0;
+    margin: 0 0 0 5px;
+  }
 `;
 
 const Info = styled.div`
   display: flex;
-  margin: 15px 15px;
+  margin: 0px 15px 15px 15px;
+  @media (max-width: 1024px) {
+    margin: 0px 10px 10px 10px;
+  }
+  @media (max-width: 640px) {
+    margin: 0px 6px 6px 6px;
+  }
+  @media (max-width: 480px) {
+    margin: 0px 2px 2px 2px;
+  }
 `;
 
 const Title = styled.div`
-  width: 50px;
+  font-size: 1.2rem;
+  position: relative;
+  width: 5%;
   margin: 0 72px 0 0;
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+    margin: 0 48px 0 0;
+  }
+  @media (max-width: 640px) {
+    width: 9%;
+    font-size: 1rem;
+    margin: 0 36px 0 0;
+  }
+  @media (max-width: 480px) {
+    width: 8%;
+    font-size: 0.8rem;
+    margin: 0 24px 0 0;
+  }
 `;
 const Content = styled.div`
   color: #8e8e8e;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
+  }
 `;
 
 const EducationBox = styled.div`
@@ -133,19 +205,50 @@ const EducationTitle = styled.div`
   font-size: 2rem;
   margin: 0 0 28px 0;
   font-weight: 600;
+  @media (max-width: 1024px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 1.3rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const GapBox = styled.div`
   margin: 12px 0 50px 0;
 `;
 
-const Date = styled.div`
-  width: ${(props) => props.color || "250px"};
+const Date = styled.div<CssProps>`
+  width: ${(props) => props.width || "250px"};
   font-size: 1.2rem;
+  @media (max-width: 1024px) {
+    width: ${(props) => props.width || "200px"};
+    font-size: 1.1rem;
+  }
+  @media (max-width: 640px) {
+    width: ${(props) => props.width || "170px"};
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    width: ${(props) => props.width || "150px"};
+    font-size: 0.9rem;
+  }
 `;
 
 const Click = styled.div`
   color: #8e8e8e;
   font-size: 1.2rem;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;

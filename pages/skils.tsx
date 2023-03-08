@@ -1,6 +1,6 @@
 import Head from "next/head";
 import styled, { css, keyframes } from "styled-components";
-import Wrapper from "@/component/Wrapper";
+
 import Image from "next/image";
 
 interface CssType {
@@ -15,41 +15,44 @@ export default function Skils() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Wrapper>
+      <>
         <ContentLayout>
           <LineBox>
             <Line></Line>
             <div>Front-end(FE)</div>
           </LineBox>
+
           <Box>
             <ImageBox>
               <Image
                 src={"/images/html.png"}
-                width={64}
-                height={64}
                 alt="image"
                 loading="lazy"
+                width={64}
+                height={64}
                 style={{
                   position: "absolute",
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
+                  width: "65%",
+                  height: "65%",
                 }}
               />
             </ImageBox>
             <ContentBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Name,</Title>
                 <Content>HTML 5</Content>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Proficiency,</Title>
                 <Graph>
                   <Animation variant="html" />
-                  <Test>65%</Test>
+                  <Text>65%</Text>
                 </Graph>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="summary">
                 <Title>Summary,</Title>
                 <Content>
                   <ContentText>
@@ -81,22 +84,24 @@ export default function Skils() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
+                  width: "65%",
+                  height: "65%",
                 }}
               />
             </ImageBox>
             <ContentBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Name,</Title>
                 <Content>CSS 3</Content>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Proficiency,</Title>
                 <Graph>
-                  <Animation variant="css" />
-                  <Test>65%</Test>
+                  <Animation variant="html" />
+                  <Text>65%</Text>
                 </Graph>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="summary">
                 <Title>Summary,</Title>
                 <Content>
                   <ContentText>
@@ -129,22 +134,24 @@ export default function Skils() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
+                  width: "65%",
+                  height: "65%",
                 }}
               />
             </ImageBox>
             <ContentBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Name,</Title>
                 <Content>JavaScript</Content>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Proficiency,</Title>
                 <Graph>
-                  <Animation variant="js" />
-                  <Test>65%</Test>
+                  <Animation variant="html" />
+                  <Text>65%</Text>
                 </Graph>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="summary">
                 <Title>Summary,</Title>
                 <Content>
                   <ContentText>
@@ -174,22 +181,24 @@ export default function Skils() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
+                  width: "65%",
+                  height: "65%",
                 }}
               />
             </ImageBox>
             <ContentBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Name,</Title>
                 <Content>React</Content>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Proficiency,</Title>
                 <Graph>
                   <Animation variant="react" />
-                  <Test>60%</Test>
+                  <Text>60%</Text>
                 </Graph>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="summary">
                 <Title>Summary,</Title>
                 <Content>
                   <Content>
@@ -218,22 +227,24 @@ export default function Skils() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
+                  width: "65%",
+                  height: "65%",
                 }}
               />
             </ImageBox>
             <ContentBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Name,</Title>
                 <Content>TypeScript</Content>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Proficiency,</Title>
                 <Graph>
                   <Animation variant="ts" />
-                  <Test>55%</Test>
+                  <Text>55%</Text>
                 </Graph>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="summary">
                 <Title>Summary,</Title>
                 <Content>
                   <ContentText>
@@ -262,22 +273,24 @@ export default function Skils() {
                   top: "50%",
                   left: "50%",
                   transform: "translate(-50%, -50%)",
+                  width: "65%",
+                  height: "65%",
                 }}
               />
             </ImageBox>
             <ContentBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Name,</Title>
                 <Content>Next-JS</Content>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="common">
                 <Title>Proficiency,</Title>
                 <Graph>
-                  <Animation variant="next" />
-                  <Test>55%</Test>
+                  <Animation variant="ts" />
+                  <Text>55%</Text>
                 </Graph>
               </FlexBox>
-              <FlexBox>
+              <FlexBox variant="summary">
                 <Title>Summary,</Title>
                 <Content>
                   <ContentText>
@@ -294,7 +307,7 @@ export default function Skils() {
             </ContentBox>
           </Box>
         </ContentLayout>
-      </Wrapper>
+      </>
     </>
   );
 }
@@ -302,6 +315,15 @@ export default function Skils() {
 const ContentLayout = styled.div`
   font-size: 2rem;
   color: #fff;
+  @media (max-width: 1024px) {
+    font-size: 1.8rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 `;
 const LineBox = styled.div`
   display: flex;
@@ -311,10 +333,20 @@ const Line = styled.div`
   height: 33px;
   margin: 0 10px 0 0;
   background-color: #fff;
+  @media (max-width: 1024px) {
+    height: 28px;
+  }
+  @media (max-width: 640px) {
+    height: 24px;
+  }
+  @media (max-width: 480px) {
+    width: 2px;
+    height: 20px;
+  }
 `;
 const Box = styled.div`
   display: flex;
-  margin: 30px 0;
+  margin: 24px 0;
 `;
 
 const ImageBox = styled.div`
@@ -323,54 +355,111 @@ const ImageBox = styled.div`
   height: 100px;
   border-radius: 16px;
   background-color: #fff;
+  @media (max-width: 1024px) {
+    width: 90px;
+    height: 90px;
+    margin: 2px 0 0 0;
+  }
+  @media (max-width: 640px) {
+    width: 80px;
+    height: 80px;
+    margin: 4px 0 0 0;
+  }
+  @media (max-width: 480px) {
+    width: 70px;
+    height: 70px;
+    margin: 2px 0 0 0;
+  }
 `;
 
 const ContentBox = styled.div`
+  position: relative;
+  width: 80%;
+  /* width: calc(100% - 130px); */
   margin: 0 0 0 30px;
+  @media (max-width: 1024px) {
+    margin: 0 0 0 25px;
+  }
+  @media (max-width: 640px) {
+    width: calc(100% - 100px);
+    margin: 0 0 0 15px;
+  }
+  @media (max-width: 480px) {
+    margin: 0 0 0 10px;
+  }
 `;
 
 const FlexBox = styled.div`
   display: flex;
-  /* height: 25px; */
-  /* align-items: center; */
-  margin: 10px 0;
+  width: 100%;
+  margin: 10px 0 0 0;
+  @media (max-width: 1024px) {
+    margin: 8px 0 0 0;
+  }
+  @media (max-width: 640px) {
+  }
+  @media (max-width: 480px) {
+    margin: 6px 0 0 0;
+  }
+  ${({ variant }: CssType) => {
+    switch (variant) {
+      case "common":
+        return css`
+          align-items: center;
+        `;
+      case "summary":
+        return css`
+          align-items: start;
+        `;
+
+      default:
+        break;
+    }
+  }}
 `;
+
 const Title = styled.div`
-  width: 150px;
+  position: relative;
+  width: 20%;
+  /* width: calc(25% - 10px); */
+  margin: 0 10px 0 0;
   font-size: 1.2rem;
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+    /* width: 100px; */
+  }
+  @media (max-width: 640px) {
+    width: 22%;
+    font-size: 1rem;
+    margin: 0 20px 0 0;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Content = styled.div`
+  /* width: 70%; */
   color: #8e8e8e;
   font-size: 1rem;
+  word-break: keep-all;
+  @media (max-width: 1024px) {
+    width: 70%;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.7rem;
+  }
 `;
 
 const ContentText = styled.div`
   margin: 5px 0;
-  line-height: 1.4;
+  line-height: 1.5;
 `;
 const HtmlEffect = keyframes`
-0% {
-  width: 0px;
-      background-color: #888888;
-}
-100% {
-  width: 65%;
-      background-color: #ffa877;
-}
-`;
-const CssEffect = keyframes`
-0% {
-  width: 0px;
-      background-color: #888888;
-}
-100% {
-  width: 65%;
-      background-color: #ffa877;
-}
-`;
-
-const JsEffect = keyframes`
 0% {
   width: 0px;
       background-color: #888888;
@@ -403,79 +492,28 @@ const TsEffect = keyframes`
 }
 `;
 
-const NextEffect = keyframes`
-0% {
-  width: 0px;
-      background-color: #888888;
-}
-100% {
-  width: 55%;
-      background-color: #ffa877;
-}
-`;
-
 const Animation = styled.div`
+  position: absolute;
+  height: 100%;
+  border-radius: 24px;
+  background-color: #ffa877;
+  z-index: 2;
   ${({ variant }: CssType) => {
     switch (variant) {
       case "html":
         return css`
-          position: absolute;
           width: 65%;
-          height: 100%;
           animation: ${HtmlEffect} 2s;
-          border-radius: 24px;
-          background-color: #ffa877;
-          z-index: 2;
-        `;
-      case "css":
-        return css`
-          position: absolute;
-          width: 65%;
-          height: 100%;
-          animation: ${CssEffect} 2s;
-          border-radius: 24px;
-          background-color: #ffa877;
-          z-index: 2;
-        `;
-      case "js":
-        return css`
-          position: absolute;
-          width: 65%;
-          height: 100%;
-          animation: ${JsEffect} 2s;
-          border-radius: 24px;
-          background-color: #ffa877;
-          z-index: 2;
         `;
       case "react":
         return css`
-          position: absolute;
           width: 60%;
-          height: 100%;
           animation: ${ReactEffect} 2s;
-          border-radius: 24px;
-          background-color: #ffa877;
-          z-index: 2;
         `;
       case "ts":
         return css`
-          position: absolute;
           width: 55%;
-          height: 100%;
           animation: ${TsEffect} 2s;
-          border-radius: 24px;
-          background-color: #ffa877;
-          z-index: 2;
-        `;
-      case "next":
-        return css`
-          position: absolute;
-          width: 55%;
-          height: 100%;
-          animation: ${NextEffect} 2s;
-          border-radius: 24px;
-          background-color: #ffa877;
-          z-index: 2;
         `;
       default:
         break;
@@ -485,18 +523,43 @@ const Animation = styled.div`
 
 const Graph = styled.div`
   position: relative;
-  width: 650px;
-  height: 18px;
+  width: 65%;
+  height: 21px;
   text-align: center;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   border-radius: 24px;
   background-color: #888888;
+  @media (max-width: 1024px) {
+    /* font-size: 0.9rem; */
+    width: 70%;
+    height: 20px;
+  }
+  @media (max-width: 640px) {
+    width: 70%;
+    height: 18px;
+  }
+  @media (max-width: 480px) {
+    height: 16px;
+  }
 `;
 
-const Test = styled.div`
+const Text = styled.div`
   position: absolute;
   right: 5%;
   color: #fff;
-  font-size: 1rem;
+  font-size: 0.8rem;
+  padding: 2.5px 0;
   z-index: 5;
+  @media (max-width: 1024px) {
+    font-size: 0.7rem;
+    padding: 4px 0;
+  }
+  @media (max-width: 640px) {
+    font-size: 0.6rem;
+    padding: 3px 0;
+  }
+  @media (max-width: 480px) {
+    font-size: 0.5rem;
+    padding: 2px 0;
+  }
 `;

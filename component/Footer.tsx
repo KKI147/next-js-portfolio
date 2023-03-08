@@ -23,31 +23,28 @@ interface CssType {
 }
 
 const CopyLight = styled.div`
+  position: absolute;
+  bottom: 0;
+  font-size: 1rem;
+  color: #fff;
   ${({ variant }: CssType) => {
     switch (variant) {
       case "page":
         return css`
-          position: absolute;
           width: 100%;
-          height: 5%;
-          padding: 15px 5px;
-          font-size: 1rem;
-          color: #fff;
         `;
       case "home":
         return css`
-          position: absolute;
           width: calc(100% - 30px);
-          height: 5%;
           padding: 15px 5px;
-          font-size: 1rem;
-          color: #fff;
-          bottom: 0;
         `;
       default:
         break;
     }
   }}
+  @media (max-width: 1024px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const Text = styled.div`

@@ -22,3 +22,15 @@ body {
 a {
   text-decoration: none;
 }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ::marker {
+  font-size: 5rem;
+  line-height: 2;
+  color: #fff;
+} */

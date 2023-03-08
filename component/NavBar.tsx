@@ -32,13 +32,13 @@ export default function NavBar() {
             <Text>Projects</Text>
           )}
         </Link>
-        <Link href={"exp"}>
+        {/* <Link href={"exp"}>
           {router.pathname === "/exp" ? (
             <Locate>Exp, Storage.</Locate>
           ) : (
             <Text>Exp, Storage.</Text>
           )}
-        </Link>
+        </Link> */}
       </LinkBox>
     </Section>
   );
@@ -51,6 +51,22 @@ const Section = styled.section`
   height: calc(100vh - 40px);
   font-size: 1.5rem;
   color: #fff;
+  @media (max-width: 1024px) {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 5%;
+    font-size: 1.2rem;
+  }
+  @media (max-width: 640px) {
+    width: calc(100% - 60px);
+    padding: 0 10px;
+    font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    width: calc(100% - 50px);
+    padding: 0 5px;
+    font-size: 0.8rem;
+  }
 `;
 
 const LinkBox = styled.div`
@@ -58,14 +74,21 @@ const LinkBox = styled.div`
   width: 100%;
   padding: 0 15px;
   bottom: 30px;
+  @media (max-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0px;
+  }
 `;
-const hover = keyframes`
+const hover = (fullWidth: string) => keyframes`
+
 0% {
   width: 0px;
     
 }
 100% {
-  width: 40px;
+  width: ${fullWidth};
   
 }
 `;
@@ -78,12 +101,41 @@ const Text = styled.div`
     ::after {
       position: absolute;
       display: inline-block;
-      width: 40px;
+      width: 10%;
       top: 12px;
       margin: 0 0 0 20px;
       content: "";
       border-top: 1px solid #fff;
-      animation: ${hover} 0.5s;
+      animation: ${hover("10%")} 0.5s;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0px 50px;
+
+    ::after {
+      width: 40px;
+      top: 10px;
+    }
+  }
+  @media (max-width: 640px) {
+    margin: 0px 20px;
+
+    ::after {
+      margin: 0 0 0 15px;
+      width: 30px;
+      top: 8px;
+      animation: ${hover("30px")} 0.5s;
+    }
+  }
+
+  @media (max-width: 480px) {
+    margin: 0px 10px;
+    ::after {
+      margin: 0 0 0 10px;
+      width: 20px;
+      top: 6px;
+      animation: ${hover("20px")} 0.5s;
     }
   }
 `;
@@ -95,10 +147,34 @@ const Locate = styled.div`
   ::after {
     position: absolute;
     display: inline-block;
-    width: 40px;
+    width: 10%;
     top: 12px;
     margin: 0 0 0 20px;
     content: "";
     border-top: 1px solid #fff;
+  }
+
+  @media (max-width: 1024px) {
+    margin: 0px 50px;
+    ::after {
+      width: 40px;
+      top: 10px;
+    }
+  }
+  @media (max-width: 640px) {
+    margin: 0px 20px;
+    ::after {
+      width: 30px;
+      top: 8px;
+      margin: 0 0 0 15px;
+    }
+  }
+  @media (max-width: 480px) {
+    margin: 0px 10px;
+    ::after {
+      width: 20px;
+      top: 6px;
+      margin: 0 0 0 10px;
+    }
   }
 `;

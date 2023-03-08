@@ -25,6 +25,15 @@ const Section = styled.section`
   color: #fff;
   font-size: 3.5rem;
   font-weight: bold;
+  @media (max-width: 1024px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 2rem;
+  }
+  @media (max-width: 480px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const Top = styled.div`
@@ -32,6 +41,12 @@ const Top = styled.div`
   position: relative;
   left: 15.5%;
   margin: 10px 0;
+  @media (max-width: 1024px) {
+    left: 16%;
+  }
+  @media (max-width: 640px) {
+    left: 17%;
+  }
 `;
 const MiddleContainer = styled.div`
   position: relative;
@@ -72,24 +87,32 @@ const Animation = styled.div`
 const MiddleWrapper = styled.div`
   width: 25%;
   display: inline-block;
+  @media (max-width: 1024px) {
+    width: 35%;
+  }
 `;
 
-const right = keyframes`
-0% {
-  width: 0px;
+const right = (fullWidth: string) => keyframes`
+  0% {
+    width: 0px;
     background-color: #fff;
-}
-100% {
-  width: calc(60% - 10px);
+  }
+  100% {
+    width: ${fullWidth};
     background-color: #fff;
-}
+  }
 `;
 const MiddleRightLine = styled.div`
   width: calc(60% - 10px);
   height: 2px;
   background-color: #fff;
   display: inline-block;
-  animation: ${right} 2s;
+  animation: ${right("calc(60% - 10px)")} 2s;
+
+  @media (max-width: 1024px) {
+    width: calc(50% - 10px);
+    animation: ${right("calc(50% - 10px)")} 2s;
+  }
 `;
 
 const Buttom = styled.div`
@@ -97,4 +120,10 @@ const Buttom = styled.div`
   position: relative;
   left: 15.5%;
   margin: 10px 0;
+  @media (max-width: 1024px) {
+    left: 16%;
+  }
+  @media (max-width: 640px) {
+    left: 17%;
+  }
 `;

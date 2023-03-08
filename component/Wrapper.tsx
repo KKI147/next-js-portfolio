@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Footer from "./Footer";
 
 export default function Wrapper({ children }: any) {
   return <Section>{children}</Section>;
@@ -7,6 +6,12 @@ export default function Wrapper({ children }: any) {
 
 const Section = styled.div`
   position: relative;
-  width: 100%;
+  width: 85%;
   height: 100%;
+  @media (max-width: 1024px) {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(95% - 40px);
+    top: 7%;
+  }
 `;
