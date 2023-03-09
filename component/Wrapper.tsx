@@ -12,6 +12,12 @@ const Section = styled.div`
     position: absolute;
     width: calc(100% - 40px);
     height: calc(95% - 40px);
-    top: 7%;
+    top: calc(36px + 5%);
+  }
+  @media (max-width: 1024px) {
+    position: absolute;
+    width: calc(100% - 40px);
+    height: calc(95% - 56px);
+    top: calc(36px + 5%);
   }
 `;

@@ -347,6 +347,15 @@ const Line = styled.div`
 const Box = styled.div`
   display: flex;
   margin: 24px 0;
+  @media (max-width: 1024px) {
+    margin: 20px 0;
+  }
+  @media (max-width: 640px) {
+    margin: 18px 0;
+  }
+  @media (max-width: 480px) {
+    margin: 12px 0;
+  }
 `;
 
 const ImageBox = styled.div`
@@ -366,9 +375,9 @@ const ImageBox = styled.div`
     margin: 4px 0 0 0;
   }
   @media (max-width: 480px) {
-    width: 70px;
-    height: 70px;
-    margin: 2px 0 0 0;
+    width: 60px;
+    height: 60px;
+    margin: 0;
   }
 `;
 
@@ -378,13 +387,15 @@ const ContentBox = styled.div`
   /* width: calc(100% - 130px); */
   margin: 0 0 0 30px;
   @media (max-width: 1024px) {
+    width: calc(100% - 115px);
     margin: 0 0 0 25px;
   }
   @media (max-width: 640px) {
-    width: calc(100% - 100px);
+    width: calc(100% - 95px);
     margin: 0 0 0 15px;
   }
   @media (max-width: 480px) {
+    width: calc(100% - 70px);
     margin: 0 0 0 10px;
   }
 `;
@@ -397,9 +408,10 @@ const FlexBox = styled.div`
     margin: 8px 0 0 0;
   }
   @media (max-width: 640px) {
+    margin: 6px 0 0 0;
   }
   @media (max-width: 480px) {
-    margin: 6px 0 0 0;
+    margin: 2px 0 0 0;
   }
   ${({ variant }: CssType) => {
     switch (variant) {
@@ -431,9 +443,10 @@ const Title = styled.div`
   @media (max-width: 640px) {
     width: 22%;
     font-size: 1rem;
-    margin: 0 20px 0 0;
+    /* margin: 0 20px 0 0; */
   }
   @media (max-width: 480px) {
+    width: 70px;
     font-size: 0.9rem;
   }
 `;

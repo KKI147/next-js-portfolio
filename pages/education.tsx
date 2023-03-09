@@ -113,18 +113,18 @@ const ProfileBox = styled.div`
 const ImageBox = styled.div`
   position: relative;
   width: 200px;
-  height: 180px;
+  height: 200px;
   @media (max-width: 1024px) {
-    width: 200px;
-    height: 180px;
-  }
-  @media (max-width: 640px) {
     width: 180px;
     height: 180px;
   }
+  @media (max-width: 640px) {
+    width: 160px;
+    height: 160px;
+  }
   @media (max-width: 480px) {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
   }
 `;
 
@@ -147,6 +147,7 @@ const InfoBox = styled.div`
 
 const Info = styled.div`
   display: flex;
+  align-items: center;
   margin: 0px 15px 15px 15px;
   @media (max-width: 1024px) {
     margin: 0px 10px 10px 10px;
@@ -174,9 +175,9 @@ const Title = styled.div`
     margin: 0 36px 0 0;
   }
   @media (max-width: 480px) {
-    width: 8%;
+    width: 18px;
     font-size: 0.8rem;
-    margin: 0 24px 0 0;
+    /* margin: 0 24px 0 0; */
   }
 `;
 const Content = styled.div`
@@ -195,10 +196,18 @@ const Content = styled.div`
 
 const EducationBox = styled.div`
   padding: 48px 0 35px 12px;
+  @media (max-width: 1024px) {
+    padding: 15px 0 35px 0;
+  }
+  @media (max-width: 480px) {
+    text-align: center;
+    padding: 28px 0 35px 0;
+  }
 `;
 
 const FlexBox = styled.div`
   display: flex;
+  align-items: center;
   margin: 20px 0;
 `;
 const EducationTitle = styled.div`
@@ -207,12 +216,15 @@ const EducationTitle = styled.div`
   font-weight: 600;
   @media (max-width: 1024px) {
     font-size: 1.5rem;
+    margin: 0 0 22px 0;
   }
   @media (max-width: 640px) {
     font-size: 1.3rem;
+    margin: 0 0 16px 0;
   }
   @media (max-width: 480px) {
     font-size: 1.1rem;
+    margin: 0 0 10px 0;
   }
 `;
 

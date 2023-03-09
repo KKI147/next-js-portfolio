@@ -80,6 +80,12 @@ const LinkBox = styled.div`
     top: 0;
     bottom: 0px;
   }
+  @media (max-width: 480px) {
+    display: flex;
+    justify-content: space-between;
+    top: 0;
+    bottom: 0px;
+  }
 `;
 const hover = (fullWidth: string) => keyframes`
 

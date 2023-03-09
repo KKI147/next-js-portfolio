@@ -33,6 +33,7 @@ const LayoutComponent = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding: 20px 20px;
   background: url("/images/background.svg");
   /* background-image: cover; */
@@ -50,7 +51,7 @@ const TopSection = styled.div`
   height: 95%;
   background-color: #444444;
   border-radius: 16px;
-  padding: 50px 50px;
+  padding: 50px;
   overflow-y: scroll;
   ::-webkit-scrollbar {
     display: none;
@@ -58,16 +59,16 @@ const TopSection = styled.div`
   @media (max-width: 1024px) {
     width: 100%;
     height: calc(100% - 60px);
-    padding: 50px 30px;
+    padding: 40px;
   }
   @media (max-width: 640px) {
     width: 100%;
     height: calc(100% - 40px);
-    padding: 40px 20px;
+    padding: 30px;
   }
   @media (max-width: 480px) {
     width: 100%;
     height: calc(100% - 60px);
-    padding: 50px 30px;
+    padding: 20px;
   }
 `;
