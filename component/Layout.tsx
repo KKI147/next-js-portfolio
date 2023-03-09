@@ -63,7 +63,7 @@ const TopSection = styled.div`
   }
   @media (max-width: 640px) {
     width: 100%;
-    height: calc(100% - 40px);
+    height: calc(100% - 60px);
     padding: 30px;
   }
   @media (max-width: 480px) {

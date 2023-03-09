@@ -521,6 +521,9 @@ const Graph = styled.div`
   /* font-size: 1rem; */
   border-radius: 24px;
   background-color: #888888;
+  display: flex;
+  align-items: center;
+
   @media (max-width: 1024px) {
     /* font-size: 0.9rem; */
     width: 70%;
@@ -540,18 +543,15 @@ const Text = styled.div`
   right: 5%;
   color: #fff;
   font-size: 0.8rem;
-  padding: 2.5px 0;
   z-index: 5;
+
   @media (max-width: 1024px) {
     font-size: 0.7rem;
-    padding: 4px 0;
   }
   @media (max-width: 640px) {
     font-size: 0.6rem;
-    padding: 3px 0;
   }
   @media (max-width: 480px) {
     font-size: 0.5rem;
-    padding: 2px 0;
   }
 `;

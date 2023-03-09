@@ -230,6 +230,9 @@ const Line = styled.ul`
     height: 50px;
     background-color: #444444;
   }
+  @media (max-width: 1024px) {
+    left: 7%;
+  }
 `;
 
 const ProjectList = styled.li`
@@ -284,41 +287,44 @@ const ProjectContainer = styled.div`
         return css`
           left: 40px;
           margin: 0 0 36px 0;
-          @media (max-width: 640px) {
+
+          /* @media (max-width: 640px) {
             left: 37px;
           }
           @media (max-width: 480px) {
             left: 34px;
-          }
+          } */
         `;
       case "left":
         return css`
           right: 40vw;
           margin: 36px 0 0 10px;
-          @media (max-width: 1024px) {
-            right: 45vw;
-          }
-          @media (max-width: 640px) {
+
+          /* @media (max-width: 640px) {
             right: 43vw;
           }
           @media (max-width: 480px) {
             right: 42vw;
-          }
+          } */
         `;
       default:
         break;
     }
   }}
   @media (max-width: 1024px) {
-    width: calc(50vw - 100px);
+    width: calc(90vw - 100px);
+    left: 40px;
+    margin: 0 0 36px 0;
   }
   @media (max-width: 640px) {
-    width: calc(52vw - 100px);
-    padding: 18px 20px;
+    /* width: calc(52vw - 100px);
+    padding: 18px 20px; */
+    margin: 0 0 32px 0;
   }
   @media (max-width: 480px) {
-    width: calc(55vw - 100px);
-    padding: 14px 20px;
+    /* width: calc(55vw - 100px);
+    padding: 14px 20px; */
+    margin: 0 0 28px 0;
   }
 `;
 const ProjectHeader = styled.div`

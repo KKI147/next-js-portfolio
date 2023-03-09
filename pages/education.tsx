@@ -140,7 +140,7 @@ const InfoBox = styled.div`
     margin: 0 0 0 10px;
   }
   @media (max-width: 480px) {
-    padding: 2px 0 0 0;
+    line-height: 1.3;
     margin: 0 0 0 5px;
   }
 `;
@@ -255,12 +255,12 @@ const Click = styled.div`
   cursor: pointer;
 
   @media (max-width: 1024px) {
-    font-size: 1.1rem;
-  }
-  @media (max-width: 640px) {
     font-size: 1rem;
   }
+  @media (max-width: 640px) {
+    font-size: 0.8rem;
+  }
   @media (max-width: 480px) {
-    font-size: 0.9rem;
+    font-size: 0.6rem;
   }
 `;
