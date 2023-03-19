@@ -1,6 +1,6 @@
 ## 프로젝트 목표와 목적
 
-기존에 작성하였던 Portfolio를 공부중인 Next-JS와 TypeScript를 접목시켜 현재 학습한 정도를 돌아보고 정리하기 위한 프로젝트입니다.
+본인의 기술스택 정리와 구현해보고자 했던 기술을 적용한 포트폴리오 사이트
 
 ### 🔗[페이지 이동하기](https://next-js-portfolio-smoky.vercel.app/)
 
@@ -16,3 +16,7 @@
 <img src="https://img.shields.io/badge/Next.js-339933?style=for-the-badge&logo=Next.js&logoColor=white">
  <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
  </div>
+
+<div>‣ 기존의 javascript를 사용하여 만들었던 포트폴리오를 학습중인 Next.js,Typescript 를 활용하여 개발</div>
+<div>‣ 기존의 부족한 media별 css 처리를 보완하였고 여러 디자인 들을 참고하여 좀더 다듬기 위해 제작</div>
+<div>‣ 똑같은 개발환경에서의 코드이지만 cross browsing시에 표현되는 것이 달라서 좀더 명확하게 기준을 잡고 개발해야할 필요성을 느낌</div>
