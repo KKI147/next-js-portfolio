@@ -17,7 +17,8 @@
  <img src="https://img.shields.io/badge/styled components-DB7093?style=for-the-badge&logo=styledcomponents&logoColor=white">
  </div>
  <br>
-### **❗ Features**
+ 
+## **❗ Features**
 
 <br>
 <div>‣ 기존의 javascript를 사용하여 만들었던 포트폴리오를 학습중인 Next.js,Typescript 를 활용하여 개발</div>
