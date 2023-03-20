@@ -34,7 +34,7 @@ Next.js 및 Typescript를 이용하여 성능 및 효율에서 뛰어난 기술�
   <div>ㄴ Device별 Screen의 width에 맞게 각 요소들의 배치를 가로 및 세로로 변경해보면서 적절한 레이아웃을 적용</div>
   <br>
  <li>Cross Browsing 테스트 진행 시, 각 브라우저 및 Device별 화면에서 노출되는 레이아웃이 상이하였음</li>
-   <div>Cross Browsing 테스트 진행 시, localhost:port와 같은 대역 Wifi를 이용하여 실시간 Mobile Device별 %값 적용으로 테스트를 진행</div>
+   <div>ㄴ Cross Browsing 테스트 진행 시, localhost:port와 같은 대역 Wifi를 이용하여 실시간 Mobile Device별 %값 적용으로 테스트를 진행</div>
    <br>
  </li>
  </ul>
