@@ -27,21 +27,20 @@ Next.js 및 Typescript를 이용하여 성능 및 효율에서 뛰어난 기술�
  
 ## **❗ 문제상황 & 해결**
 <ul>
- <li>화면 로딩시 애니메이션의 좌우 진행방향이 다른 CSS를 동일한 Container로 간주하고 같은 속성을 적용하여, 애니메이션 적용이 부적절 하였음</li>
+ <li>화면 로딩시 애니메이션의 좌우 진행방향이 다른 CSS를 동일한 Container로 간주하고 같은 속성을 적용하여, 의도한 바와 다르게 구현 되었음</li>
  <div>ㄴ 각 진행방향이 다른 애니메이션에 Keframe의 to ~ from 속성을 개별적으로 주어서 별도로 진행되도록 적용</div>
   <br>
- <li>일정 이하의 스크린에서 요소들의 간격이 너무 좁아서 답답함을 느낌
-</li>
- <div>ㄴ media별 요소들의 배치를 바꿔서 각 media별로 구성</div>
+ <li>PC Screen에서 구현된 li 요소의 간격이 Mobile Device에서는 비교적 좁아 시각적인 답답함을 유발하는 느낌이 있었음</li>
+  <div>ㄴ Device별 Screen의 width에 맞게 각 요소들의 배치를 가로 및 세로로 변경해보면서 적절한 레이아웃을 적용</div>
   <br>
- <li>cross browsing시에 화면마다 나오는 비율이 제각각인 현상 발생
-</li>
- <div>ㄴ 값들을 %로 전환해서 그 media의 상황에 맞게 부여</div>
- 
+ <li>Cross Browsing 테스트 진행 시, 각 브라우저 및 Device별 화면에서 노출되는 레이아웃이 상이하였음</li>
+   <div>Cross Browsing 테스트 진행 시, localhost:port와 같은 대역 Wifi를 이용하여 실시간 Mobile Device별 %값 적용으로 테스트를 진행</div>
+   <br>
+ </li>
  </ul>
 
 ## **📌 회고**
 <ul>
- <li>똑같은 개발환경에서의 코드이지만 cross browsing시에 표현되는 것이 달라서 좀더 명확하게 기준을 잡고 개발해야할 필요성을 느낌.</li>
- </ul>
+ <li>같은 코드더라도, Cross Browsing 테스트 진행 시 화면별 적용 CSS 및 레이아웃에 차이를 보고, 명확한 기준 및 설계가 추후 개발에 영향을 준다는 것을 느낌</li>
+</ul>
  
