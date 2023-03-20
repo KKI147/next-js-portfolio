@@ -3,9 +3,9 @@
 
 ## 목표
 <ul>
- <li>Kakao Hompage의 레이아웃을 HTML, CSS만으로 초기 레이아웃 설계</li>
   <li>설계 레이아웃 구현</li>
-   <li>이외의 애니메이션이나 Modal등 MVP 구현</li>
+   <li>애니메이션이 효과</li>
+ <li>media별 css 반응형</li>
  </ul>
 
 ## 🔗[페이지 이동하기](https://next-js-portfolio-smoky.vercel.app/)
@@ -24,7 +24,23 @@
  </div>
  <br>
  
-## **❗ Features**
-<div>‣ </div>
-<div>‣ 기존의 부족한 media별 css 처리를 보완하였고 여러 디자인 들을 참고하여 좀더 다듬기 위해 제작</div>
-<div>‣ 똑같은 개발환경에서의 코드이지만 cross browsing시에 표현되는 것이 달라서 좀더 명확하게 기준을 잡고 개발해야할 필요성을 느낌</div>
+## **❗ 문제상황 & 해결**
+<ul>
+ <li>화면 로딩시 생기는 애니메이션의 좌우 속성이 같은 css 속성으로 적용시 깨짐발생</li>
+ <div>ㄴ 각각의 애니메이션의 효과 코드를 별도로 작성</div>
+  <br>
+ <li>일정 이하의 스크린에서 요소들의 간격이 너무 좁아서 답답함을 느낌
+</li>
+ <div>ㄴ media별 요소들의 배치를 바꿔서 각 media별로 구성</div>
+  <br>
+ <li>cross browsing시에 화면마다 나오는 비율이 제각각인 현상 발생
+</li>
+ <div>ㄴ 값들을 %로 전환해서 그 media의 상황에 맞게 부여</div>
+ 
+ </ul>
+
+## **📌 회고**
+<ul>
+ <li>똑같은 개발환경에서의 코드이지만 cross browsing시에 표현되는 것이 달라서 좀더 명확하게 기준을 잡고 개발해야할 필요성을 느낌.</li>
+ </ul>
+ 
