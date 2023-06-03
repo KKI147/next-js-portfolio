@@ -46,22 +46,13 @@ export default function Projects() {
                   </div>
                   <div>‣ React Hook form, yup를 이용한 회원가입 개발</div>
                   <div>‣ 입력값 검증 및 로그인 개발.</div>
-                  <div>
-                    ‣ FormData 및 Multer를 사용한 첨부파일 업로드 개발예정.
-                  </div>
-                  <div>
-                    ‣ FormData 및 Multer를 사용한 첨부파일 다운로드 개발예정.
-                  </div>
-                  <div>
-                    ‣ React-Sun-Editor를 사용한 Editor Service 개발예정.
-                  </div>
+
                   <div>
                     ‣ 간단한 입력폼의 정보를 React Hook Form, Email-JS를 통한
                     메일전송 개발.
                   </div>
-                  <div>‣ React-Calender 개발예정.</div>
-                  <div>‣ Kakao Map API Service를 통한 Map 개발예정.</div>
-                  <div>‣ Recoil Store를 통한 Loading Component 개발예정.</div>
+                  <div>‣ Kakao Map API Service를 통한 Map 개발.</div>
+                  <div>‣ Boolean상태를 통한 Loading Component 개발.</div>
                 </Content>
               </ContentContainer>
             </ProjectContainer>
@@ -191,24 +182,6 @@ export default function Projects() {
               </ContentContainer>
             </ProjectContainer>
           </ProjectList>
-
-          {/* project */}
-          <ProjectList>
-            <ProjectContainer variant="left">
-              <ProjectHeader>2022.10</ProjectHeader>
-              <ContentContainer>
-                <ContentTitle>To Do List</ContentTitle>
-                <Content>
-                  <div>
-                    ‣ 스스로 해야하는 목록에 대해서 첫 CRUD 개발 사이트.
-                  </div>
-                  <div>‣ 게시글 목록에 대한 작성 및 사용자 Alert 개발.</div>
-                  <div>‣ 게시글 삭제 및 API 데모 통신 개발.</div>
-                  <div>‣ 프로젝트 퍼블리싱.</div>
-                </Content>
-              </ContentContainer>
-            </ProjectContainer>
-          </ProjectList>
         </Line>
       </>
     </>
@@ -287,25 +260,11 @@ const ProjectContainer = styled.div`
         return css`
           left: 40px;
           margin: 0 0 36px 0;
-
-          /* @media (max-width: 640px) {
-            left: 37px;
-          }
-          @media (max-width: 480px) {
-            left: 34px;
-          } */
         `;
       case "left":
         return css`
           right: 40vw;
           margin: 36px 0 0 10px;
-
-          /* @media (max-width: 640px) {
-            right: 43vw;
-          }
-          @media (max-width: 480px) {
-            right: 42vw;
-          } */
         `;
       default:
         break;

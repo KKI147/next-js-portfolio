@@ -56,10 +56,14 @@ export default function Education() {
             <EducationTitle>Education activity.</EducationTitle>
             <GapBox>
               <FlexBox>
-                <Date>2022.03 ~ 2022.12,</Date>
-                <Content>스파르타코딩클럽 항해99 9기 수료</Content>
+                <Date>2023.04 ~ 2023.05,</Date>
+                <Content>&#91;프리온보딩 인턴십&#93;: 프론트엔드</Content>
               </FlexBox>
               <FlexBox>
+                <Date>2022.09 ~ 2022.12,</Date>
+                <Content>스파르타코딩클럽 항해99 수료</Content>
+              </FlexBox>
+              {/* <FlexBox>
                 <Date>2023.01 ~ 2023.01,</Date>
                 <Content>&#91;개인&#93;포트폴리오 제작</Content>
               </FlexBox>
@@ -74,7 +78,7 @@ export default function Education() {
               <FlexBox>
                 <Date>2023.02 ~ 2023.02,</Date>
                 <Content>&#91;개인&#93;Next-js 포트폴리오 개발 중</Content>
-              </FlexBox>
+              </FlexBox> */}
             </GapBox>
 
             <EducationTitle>Contact.</EducationTitle>
@@ -194,6 +198,8 @@ const Content = styled.div`
   }
 `;
 
+const UList = styled.ul``;
+const List = styled.li``;
 const EducationBox = styled.div`
   padding: 48px 0 35px 12px;
   @media (max-width: 1024px) {
